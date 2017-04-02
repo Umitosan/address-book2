@@ -1,4 +1,4 @@
-# address-book
+# Address-Book
 
 ##### Epicodus Section: JavaScript OO - Address Book
 
@@ -7,6 +7,12 @@
 ## Description
 
 This application is a practice of constructors and prototypes using JavaScript to create a simple Address Book app.
+
+## Specifications
+
+* Program will take user input for first and last name of contact, and display the contact by the first and last name
+  * **Example Input:** "Grady Shelton"
+  * **Example Output:** "Contacts: Grady Shelton"
 
 ## Setup
 
