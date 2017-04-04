@@ -20,24 +20,32 @@ Address.prototype.fullAddress = function() {
   return this.street + ", " + this.city + ", " + this.state;
 }
 
+function resetFields() {
+  $("input#new-first-name").val("");
+  $("input#new-last-name").val("");
+  $("input.new-street").val("");
+  $("input.new-city").val("");
+  $("input.new-state").val("");
+}
+
 // USER INTERFACE LOGIC
 $(function() {
   $("#add-address").click(function() {
-  $("#new-addresses").append('<div class="new-address">' +
-                               '<div class="form-group">' +
-                                 '<label for="new-street">Street</label>' +
-                                 '<input type="text" class="form-control new-street">' +
-                               '</div>' +
-                               '<div class="form-group">' +
-                                 '<label for="new-city">City</label>' +
-                                 '<input type="text" class="form-control new-city">' +
-                               '</div>' +
-                               '<div class="form-group">' +
-                                 '<label for="new-state">State</label>' +
-                                 '<input type="text" class="form-control new-state">' +
-                               '</div>' +
-                             '</div>');
-});
+    $("#new-addresses").append('<div class="new-address">' +
+                                 '<div class="form-group">' +
+                                   '<label for="new-street">Street</label>' +
+                                   '<input type="text" class="form-control new-street">' +
+                                 '</div>' +
+                                 '<div class="form-group">' +
+                                   '<label for="new-city">City</label>' +
+                                   '<input type="text" class="form-control new-city">' +
+                                 '</div>' +
+                                 '<div class="form-group">' +
+                                   '<label for="new-state">State</label>' +
+                                   '<input type="text" class="form-control new-state">' +
+                                 '</div>' +
+                               '</div>');
+    });
 
 
   $("form#new-contact").submit(function(e) {
@@ -69,10 +77,7 @@ $(function() {
       });
     });
 
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input.new-street").val("");
-    $("input.new-city").val("");
-    $("input.new-state").val("");
+    resetFields();
+
   });
 });
